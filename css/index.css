@@ -1,4 +1,20 @@
 *{
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20vh;
+    background-color: aquamarine;
+}
+nav ul{
+    position: relative;
+    padding: 20px;
+    width: 300px;
+    background: beige;
+    display: flex;
+    flex-direction: column;
 }
