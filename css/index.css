@@ -5,10 +5,15 @@
 }
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../images/background3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 nav{
     height: 10vh;
-    background-color: rgb(204, 51, 153);
+    /* background-color: rgb(204, 51, 153); */
+    background: linear-gradient(to bottom, rgba(255, 230, 242,0.4) 0%, rgba(179, 0, 86,0.8) 100%);
     display: flex;
 }
 
