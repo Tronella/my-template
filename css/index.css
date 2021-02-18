@@ -74,7 +74,7 @@ nav ul li a{
     .navicons{
         display: block;
     }
-
+/* Make the menu icon visible */
     .mobilemenu{
         display: block; 
         margin: 10px;
@@ -83,6 +83,8 @@ nav ul li a{
         right: 2%;
         transform: translate(-2%,-20%);
         cursor: pointer;
+        /* Bring the icon come infont */
+        z-index: 2;
    }
    .mobilemenu i{
        color: #faebf5;
@@ -99,9 +101,17 @@ nav ul li a{
         display: flex;
         justify-content:space-evenly;
         align-items: flex-start;        
-        flex-direction: column;     
+        flex-direction: column;
+        /* Get coordinates from clippy ( CSS clip path maker) */
+        clip-path: circle(8.0% at 99% 1%);
+        -webkit-clip-path: circle(8.0% at 99% 1%);
+        transition: all 1s ease-out;
     }
 
+    nav ul .open{
+        clip-path: circle(8.0% at 99% 1%);
+        -webkit-clip-path: circle(8.0% at 99% 1%);
+    }
     nav ul li{
         margin-left: 30%;
     }
@@ -132,7 +142,7 @@ nav ul li a{
 
     nav ul li a .navicons .fa:last-child{
         color:  #f5d6eb;
-        text-shadow: 3px 4px 10px rgb(250, 235, 245);
+        text-shadow: 2px 1px 8px rgb(250, 235, 245);
     }
 
     nav ul li a:hover .navicons .fa{
@@ -145,7 +155,7 @@ nav ul li a{
     nav ul li a .title{
         position: relative;
         top: 10px;
-        height: 25px;
+        height: 28px;
         width: 100%;
         display: block;
         overflow: hidden;
@@ -155,15 +165,16 @@ nav ul li a{
         position: relative;
         display: block;
         /* font-size: 18px; */
-        line-height: 25px;
+        line-height: 28px;
         transition: 0.5s;
     }
 
     nav ul li a .title span::before{
         content: attr(data-text);
         position: absolute;
+        font-weight: bold;
         color:  #f5d6eb;
-        text-shadow: 3px 4px 10px rgb(250, 235, 245);
+        text-shadow: 2px 1px 8px rgb(250, 235, 245);
         top: -100%;
         left: 0px;
         width: 100%;
